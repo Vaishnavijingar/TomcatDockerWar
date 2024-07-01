@@ -30,7 +30,7 @@ stage("Deploy to staging") {
           
           sh "docker stop \$(docker ps -qa)"
           sh "docker rm \$(docker ps -qa)"
-          sh "docker run -d -it -v /var/lib/jenkins/workspace/pipelne-with-docker/target/:/usr/local/tomcat/webapps/ -p 8081:8080 --name Testtomcat vaishu_tomcat"
+          sh "docker run -d -it -v /var/lib/jenkins/workspace/pipelne-with-docker/target/:/usr/local/tomcat/webapps/ -p 8081:8080 --name Testtomcat1 vaishu_tomcat"
      }
 }
 
